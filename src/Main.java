@@ -1,13 +1,18 @@
 public class Main {
 
     public static void main(String[] args) {
-        int[] lista = new int[80];
+        int[] lista = new int[100000];
         sorteia(lista);
+        Sort.start();
         Sort.bubbleSort(lista);
+        //Sort.insertionSort(lista);
+        Sort.stop();
         exibe(lista);
 
         System.out.println("\nNumero de entradas: " + Sort.getEntradas());
         System.out.println("\nNumero de comparacoes: " + Sort.getCount());
+        System.out.println("\nTempo (ms): " + Sort.getElapsedTimeMillis());
+        System.out.println("\nTempo (s): " + Sort.getElapsedTimeSec());
 
     }
 
